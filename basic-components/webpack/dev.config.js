@@ -3,7 +3,7 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: "development",
-    entry: "./src/app.js",
+    entry: "./src/app.js", // webpack4 之后,会有默认的entry，如果不配置，就默认为 ./src/index.js
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "../dist")
