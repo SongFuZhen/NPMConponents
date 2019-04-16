@@ -1,10 +1,38 @@
 import React, { Component } from "react";
+require("./IFrame.css");
 
 class IFrame extends Component {
-    render() {
-        const { width = "100%", height = "100%", src = "", title = "React IFrame", ...props } = this.props;
+    constructor(props) {
+        super(props);
 
-        return <iframe />;
+        this.state = {
+            isLoading: true
+        };
+    }
+
+    render() {
+        const { loading, onLoad, ...iframeProps } = this.props;
+
+        const handleOnReadyStateChange = () => {
+            this.setState({ isLoading: false });
+        };
+
+        return (
+            <>
+                {loading && this.state.isLoading ? (
+                    <div class="spinner">
+                        <div class="rect1" />
+                        <div class="rect2" />
+                        <div class="rect3" />
+                        <div class="rect4" />
+                        <div class="rect5" />
+                    </div>
+                ) : (
+                    ""
+                )}
+                <iframe {...iframeProps} onLoad={handleOnReadyStateChange} />
+            </>
+        );
     }
 }
 

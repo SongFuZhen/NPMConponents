@@ -1,6 +1,6 @@
 # React IFrame
 
-React IFrame Components. Adding Loading and Exception Deal
+React IFrame Components. Adding Loading
 
 # Installation
 
@@ -12,20 +12,21 @@ _or_
 
 # Usage - Sample
 
-<pre>
-import Iframe from 'react-iframe'
-
+```jsx
+import React from "react";
+import IFrame from "react-iframe";
 
 const iframeProps = {
-    title: 'your nick title',
-    src: 'http://your url',
-    width: '100%',
-    height: '100%'
-}
+    title: "your nick title",
+    src: "http://your url",
+    width: "100%",
+    height: "100%"
+};
 
-<Iframe {...iframeProps} /> 
+const Example = () => <IFrame {...iframeProps} />;
 
-</pre>
+export default Example;
+```
 
 # Properties
 
@@ -50,7 +51,7 @@ const iframeProps = {
 <td>loadingType</td>
 <td>loading Types can Choose: balls, bars, bubbles, cubes, cylon, spin, spinningBubbles,spokes, blank</td>
 <td>string</td>
-<td>Spin</td>
+<td>spin</td>
 </tr>
 
 <tr>
@@ -63,4 +64,30 @@ const iframeProps = {
 </tbody>
 </table>
 
-Tips: You can use iframe default Props
+<i>Tips: You can also use default Props</i>
+
+# Default Properties
+
+**allow** - _Specifies a feature policy for the iframe_.
+
+**allowfullscreen** - _allow iframe fullscreen_.
+
+**src** - _string_ if set, overrides _url_.
+
+**scrolling** - _string_ not set if if not provided (deprecated in HTML5).
+
+**frameBorder** - _number_ default to "0" (deprecated in HTML5).
+
+**longdesc** - _A URL of a long description of the frame's content. Due to widespread misuse, this is not helpful for non-visual browsers_. )
+
+**height** - _string_ (1px > any number above 0, or 1% to 100%)
+
+**width** - _string_ (1px > any number above 0, or 1% to 100%)
+
+**sandbox** - add optional sandbox values ("allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation")
+
+**other props** - _iframe can support's props_
+
+# License
+
+MIT
