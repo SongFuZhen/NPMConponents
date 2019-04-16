@@ -10,17 +10,17 @@ _or_
 
 <code>yarn add react-iframe</code>
 
-Usage - Sample
+# Usage - Sample
 
 <pre>
 import Iframe from 'react-iframe'
 
 
 const iframeProps = {
-    width: '100%',
-    height: '100%',
+    title: 'your nick title',
     src: 'http://your url',
-    title: 'your nick title'
+    width: '100%',
+    height: '100%'
 }
 
 <Iframe {...iframeProps} /> 
@@ -28,3 +28,39 @@ const iframeProps = {
 </pre>
 
 # Properties
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Desc</th>
+<th>Type</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>loading</td>
+<td>need show iframe loading</td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+
+<tr>
+<td>loadingType</td>
+<td>loading Types can Choose: balls, bars, bubbles, cubes, cylon, spin, spinningBubbles,spokes, blank</td>
+<td>string</td>
+<td>Spin</td>
+</tr>
+
+<tr>
+<td>onLoad</td>
+<td>onLoad Function, after Load, you can do something</td>
+<td>function(e)</td>
+<td></td>
+</tr>
+
+</tbody>
+</table>
+
+Tips: You can use iframe default Props
