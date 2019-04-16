@@ -18,10 +18,8 @@
     "author": "Mr Song",
     "license": "ISC",
     "dependencies": {
-        "prop-types": "^15.7.2",
         "react": "^16.8.6",
-        "react-dom": "^16.8.6",
-        "react-loading": "^2.0.3"
+        "react-dom": "^16.8.6"
     },
     "devDependencies": {
         "@babel/core": "^7.4.3",
