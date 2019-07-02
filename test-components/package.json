@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "calculate-date": "^1.0.0",
     "react": "^16.8.6",
+    "react-awesome-iframe": "^1.0.4",
     "react-dom": "^16.8.6",
     "react-scripts": "^2.1.8",
     "react-song-test": "^1.0.0"
